@@ -9,7 +9,7 @@ namespace EliteK9.Controllers
     public class SchedulingController : Controller
     {
         // GET: Scheduling
-        public ActionResult Classes()
+        public ActionResult Services()
         {
             return View();
         }
