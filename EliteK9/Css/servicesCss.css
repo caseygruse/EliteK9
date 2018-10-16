@@ -1,5 +1,4 @@
-﻿body {
-    background-image: url('../images/animal-beach-bulldog-533009.jpg');
-    background-size:cover;
-    
+﻿.pageHeader{
+    font-weight: bold;
+    font-size: larger;
 }
