@@ -18,5 +18,12 @@ namespace EliteK9.Controllers
         {
             return View();
         }
+        public ActionResult Schedule()
+        {
+            return View();
+        }
+
+       
+        
     }
 }

@@ -9,10 +9,38 @@
     <div class="col-lg-6 col-xs-12">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=caseygruse222%40gmail.com&amp;color=%2329527A&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
     </div>
-    <div class="col-lg-6 col-xs-12">
-        
+    <!--<div class="col-lg-6 col-xs-12">
+
     </div>
+        -->
 </div>
+
+
+<br />
+
+
+
+<h2>Submit Email Request for Assistance</h2>
+<form method="post" action="~/Controllers/SchedulingController/Schedule">
+    <div>
+        Your name:
+        <input type="text" name="customerName" />
+    </div>
+
+    <div>
+        Your email address:
+        <input type="text" name="customerEmail" />
+    </div>
+
+    <div>
+        Details about your problem: <br />
+        <textarea name="customerRequest" cols="45" rows="4"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>
 
 
 
