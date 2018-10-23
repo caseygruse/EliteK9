@@ -10,7 +10,7 @@ namespace EliteK9.Models
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string SendersEmail{ get; set; }
         [Required]
         public string FirstName { get; set; }
         

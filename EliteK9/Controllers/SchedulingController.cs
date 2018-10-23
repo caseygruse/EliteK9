@@ -21,7 +21,7 @@ namespace EliteK9.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Schedule(EmailModel email)
+        public ActionResult Schedule(EmailModel e)
         {
             if (ModelState.IsValid)
             {
@@ -29,9 +29,9 @@ namespace EliteK9.Controllers
 
                 //MailAddress from = new MailAddress(email.Email);
 
-                return View(email);
+                return View();
             }
-            return View(email);
+            return View(e);
         }
 
 
