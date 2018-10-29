@@ -16,10 +16,12 @@ namespace EliteK9.Controllers
             return View();
         }
 
+        //get
         public ActionResult Schedule()
         {
             return View();
         }
+        //email send
         [HttpPost]
         public ActionResult Schedule(EmailModel e)
         {
