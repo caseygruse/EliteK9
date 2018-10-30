@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
+using System.Web.Helpers;
 
 namespace EliteK9.Controllers
 {
@@ -29,8 +30,12 @@ namespace EliteK9.Controllers
             {
 
 
-                //MailAddress from = new MailAddress(email.Email);
+                MailAddress from = new MailAddress(e.SendersEmail, $"{e.FirstName}, {e.LastName}");
+                MailAddress to = new MailAddress("caseygruse.222@gmail.com");
+                MailMessage message = new MailMessage(from, to);
 
+                MailAddress bcc = new MailAddress("manager1@contoso.com");
+                
                 return View();
             }
             return View(e);
