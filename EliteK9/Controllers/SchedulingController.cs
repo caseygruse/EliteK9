@@ -5,7 +5,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
+using System.Net.Http;
 using System.Web.Helpers;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace EliteK9.Controllers
 {
@@ -24,18 +27,35 @@ namespace EliteK9.Controllers
         }
         //email send
         [HttpPost]
-        public ActionResult Schedule(EmailModel e)
+        public async System.Threading.Tasks.Task<ActionResult> Schedule(EmailModel e)
         {
             if (ModelState.IsValid)
             {
 
-
-                MailAddress from = new MailAddress(e.SendersEmail, $"{e.FirstName}, {e.LastName}");
-                MailAddress to = new MailAddress("caseygruse.222@gmail.com");
-                MailMessage message = new MailMessage(from, to);
-
-                MailAddress bcc = new MailAddress("manager1@contoso.com");
                 
+  /*  needs Key
+                SendGridMessage msg = new SendGridMessage();
+
+                msg.SetFrom(new EmailAddress($"{e.SendersEmail}", $"{e.FirstName}, {e.LastName}"));
+
+                var recipients = new EmailAddress("caseygruse1@gmail.com", "Casey Gruse");
+
+                msg.AddTo(recipients);
+
+                msg.SetSubject("RSVP");
+
+                msg.PlainTextContent = e.Message;
+
+                //var transportWeb = new SendGrid.Web("SENDGRID_APIKEY");
+
+                var apiKey = System.Configuration.ConfigurationManager.AppSettings.Get("sendGridKey");
+                var client = new SendGridClient(apiKey);
+                Console.WriteLine(apiKey);
+
+                await client.SendEmailAsync(msg);
+
+                // https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email#how-to-create-an-email
+        */
                 return View();
             }
             return View(e);
