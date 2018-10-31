@@ -32,9 +32,10 @@ namespace EliteK9.Controllers
             if (ModelState.IsValid)
             {
                 await SendGridEmail.SendEmailWithGrid(e);
-                
+                ViewBag.sent = "Your email has been sent.";
                  return View();
             }
+            
             return View(e);
         }
     }
