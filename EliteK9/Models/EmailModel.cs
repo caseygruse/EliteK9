@@ -16,6 +16,7 @@ namespace EliteK9.Models
         
         public string LastName { get; set; }
         [Required]
+        [DataType(DataType.MultilineText)]
         public string Message { get; set; }
     }
 }
