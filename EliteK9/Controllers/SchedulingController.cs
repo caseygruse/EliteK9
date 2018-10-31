@@ -31,37 +31,11 @@ namespace EliteK9.Controllers
         {
             if (ModelState.IsValid)
             {
-
+                await SendGridEmail.SendEmailWithGrid(e);
                 
-  /*  needs Key
-                SendGridMessage msg = new SendGridMessage();
-
-                msg.SetFrom(new EmailAddress($"{e.SendersEmail}", $"{e.FirstName}, {e.LastName}"));
-
-                var recipients = new EmailAddress("caseygruse1@gmail.com", "Casey Gruse");
-
-                msg.AddTo(recipients);
-
-                msg.SetSubject("RSVP");
-
-                msg.PlainTextContent = e.Message;
-
-                //var transportWeb = new SendGrid.Web("SENDGRID_APIKEY");
-
-                var apiKey = System.Configuration.ConfigurationManager.AppSettings.Get("sendGridKey");
-                var client = new SendGridClient(apiKey);
-                Console.WriteLine(apiKey);
-
-                await client.SendEmailAsync(msg);
-
-                // https://docs.microsoft.com/en-us/azure/sendgrid-dotnet-how-to-send-email#how-to-create-an-email
-        */
-                return View();
+                 return View();
             }
             return View(e);
         }
-
-
-
     }
 }
