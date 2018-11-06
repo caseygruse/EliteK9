@@ -1,0 +1,19 @@
+﻿body {
+    background-color: whitesmoke;
+}
+
+.homeImage{
+    margin-top:20px;
+    margin-bottom:20px;
+    border: solid black 2px;
+    border-radius: 5%;
+}
+
+h1 {
+    font-family: 'Alegreya', serif;
+    font-weight: 700;
+    line-height: 46px;
+    font-size: 46px;
+    margin: 0 0 43px 0;
+    text-align:center;
+}
