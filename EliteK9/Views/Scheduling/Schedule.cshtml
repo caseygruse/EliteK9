@@ -1,4 +1,5 @@
-﻿@model EliteK9.Models.EmailModel
+﻿@*@model EliteK9.Models.EmailModel*@
+@model Google.Apis.Calendar.v3.Data.Events
 
 @{
     ViewBag.Title = "Schedule";
@@ -8,18 +9,35 @@
 
 <iframe src="https://calendar.google.com/calendar/embed?src=caseygruse1%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
+@if (Model.Items != null && Model.Items.Count > 0)
+{
+    foreach (var eventItem in Model.Items)
+    {
+        string when = eventItem.Start.DateTime.ToString();
+        if (String.IsNullOrEmpty(when))
+        {
+            when = eventItem.Start.Date;
+        }
+        <h2>@eventItem.Summary, @when</h2> 
+    }
+}
+else
+{
+    <h2>No upcoming events found.</h2>
+}
 
-@using (Html.BeginForm()) 
+
+@*@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <br />
     <div class="form-horizontal">
         <h4>Send us an email to RSVP</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <label class = "control-label col-md-2">Email:</label>
+            <label class="control-label col-md-2">Email:</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SendersEmail, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SendersEmail, "", new { @class = "text-danger" })
@@ -27,7 +45,7 @@
         </div>
 
         <div class="form-group">
-            <label class = "control-label col-md-2">First Name:</label>
+            <label class="control-label col-md-2">First Name:</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
@@ -35,7 +53,7 @@
         </div>
 
         <div class="form-group">
-            <label class = "control-label col-md-2">Last Name:</label>
+            <label class="control-label col-md-2">Last Name:</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
@@ -43,7 +61,7 @@
         </div>
 
         <div class="form-group">
-            <label class = "control-label col-md-2">Message</label>
+            <label class="control-label col-md-2">Message</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
@@ -57,12 +75,12 @@
         </div>
         <h4 class="col-md-offset-2">@ViewBag.sent</h4>
     </div>
-}
+}*@
 
-<div>
+@*<div>
     @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-}
+}*@
