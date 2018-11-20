@@ -27,10 +27,7 @@ namespace EliteK9.Controllers
             return View();
         }
 
-
-
-        //get
-        public ActionResult Schedule()
+        public PartialViewResult CalendarEvents()
         {
             string[] Scopes = { CalendarService.Scope.CalendarReadonly };
             string ApplicationName = "EliteK9";
@@ -43,7 +40,7 @@ namespace EliteK9.Controllers
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
-                string credPath = Server.MapPath("~/token.json"); 
+                string credPath = Server.MapPath("~/token.json");
                 credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
                     GoogleClientSecrets.Load(stream).Secrets,
                     Scopes,
@@ -87,7 +84,15 @@ namespace EliteK9.Controllers
             //{
             //    Console.WriteLine("No upcoming events found.");
             //}
-            return View(events);
+            return PartialView(events);
+        }
+
+
+        //get
+        public ActionResult Schedule()
+        {
+           
+            return View();
         }
         //email send
         [HttpPost]

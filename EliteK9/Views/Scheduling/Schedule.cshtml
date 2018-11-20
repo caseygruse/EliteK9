@@ -1,5 +1,5 @@
-﻿@*@model EliteK9.Models.EmailModel*@
-@model Google.Apis.Calendar.v3.Data.Events
+﻿@model EliteK9.Models.EmailModel
+
 
 @{
     ViewBag.Title = "Schedule";
@@ -9,25 +9,11 @@
 
 <iframe src="https://calendar.google.com/calendar/embed?src=caseygruse1%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-@if (Model.Items != null && Model.Items.Count > 0)
-{
-    foreach (var eventItem in Model.Items)
-    {
-        string when = eventItem.Start.DateTime.ToString();
-        if (String.IsNullOrEmpty(when))
-        {
-            when = eventItem.Start.Date;
-        }
-        <h2>@eventItem.Summary, @when</h2> 
-    }
-}
-else
-{
-    <h2>No upcoming events found.</h2>
-}
+
+@Html.Action("CalendarEvents", "Scheduling")
 
 
-@*@using (Html.BeginForm())
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -75,12 +61,12 @@ else
         </div>
         <h4 class="col-md-offset-2">@ViewBag.sent</h4>
     </div>
-}*@
+}
 
-@*<div>
+<div>
     @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-}*@
+}

@@ -1,0 +1,19 @@
+﻿@model Google.Apis.Calendar.v3.Data.Events
+
+
+@if (Model.Items != null && Model.Items.Count > 0)
+{
+    foreach (var eventItem in Model.Items)
+    {
+        string when = eventItem.Start.DateTime.ToString();
+        if (String.IsNullOrEmpty(when))
+        {
+            when = eventItem.Start.Date;
+        }
+        <h2>@eventItem.Summary, @when</h2>
+    }
+}
+else
+{
+    <h2>No upcoming events found.</h2>
+}
