@@ -22,8 +22,7 @@ namespace EliteK9.Controllers
     {
         // GET: Scheduling
         public ActionResult Services()
-        {
-            
+        {           
             return View();
         }
 
