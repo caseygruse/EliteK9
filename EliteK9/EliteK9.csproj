@@ -248,6 +248,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Css\AboutCss.css" />
+    <Content Include="Css\eventStylingCss.css" />
     <Content Include="Css\HomePageCss.css" />
     <Content Include="Css\Schedule.css" />
     <Content Include="Css\servicesCss.css" />

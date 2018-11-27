@@ -1,5 +1,7 @@
 ﻿@model Google.Apis.Calendar.v3.Data.Events
-
+<head>
+    <link href="~/Css/eventStylingCss.css" rel="Stylesheet" type="text/css" />
+</head>
 
 @if (Model.Items != null && Model.Items.Count > 0)
 {
@@ -10,7 +12,23 @@
         {
             when = eventItem.Start.Date;
         }
-        <h2>@eventItem.Summary, @when</h2>
+        if (@eventItem.Summary == "Basic Obedience")
+        {
+            <h2 class="tabs">@eventItem.Summary, @when</h2>
+        }
+    }
+
+    foreach (var eventItem in Model.Items)
+    {
+        string when = eventItem.Start.DateTime.ToString();
+        if (String.IsNullOrEmpty(when))
+        {
+            when = eventItem.Start.Date;
+        }
+        if (@eventItem.Summary == "Advanced Obedience")
+        {
+           <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
+        }
     }
 }
 else
