@@ -72,7 +72,7 @@
                     when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
                     string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
 
-                    if (@eventItem.Summary == "Basic Obedience")
+                    if (@eventItem.Summary == "Advanced Obedience")
                     {
                         <h2 class="tabs"> @when, @time</h2>
                     }
@@ -102,7 +102,7 @@
                     DateTime temp = Convert.ToDateTime(when);
                     when = temp.ToString("MMMM dd");
 
-                    if (@eventItem.Summary == "Advanced Obedience")
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
                     {
                         <h2 class="tabs">@when </h2>
                     }
@@ -152,7 +152,7 @@
                     when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
                     string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
 
-                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
                     {
                         <h2 class="tabs"> @when, @time</h2>
                     }
@@ -193,7 +193,7 @@
                     when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
                     string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
 
-                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    if (@eventItem.Summary == "Puppy Beginners Class")
                     {
                         <h2 class="tabs"> @when, @time</h2>
                     }
