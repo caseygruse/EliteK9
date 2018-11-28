@@ -7,18 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <button class="accordion">Basic Obedience</button>
 <div class="panel">
     <p>
@@ -36,7 +24,7 @@
 
                     if (@eventItem.Summary == "Basic Obedience")
                     {
-                        <h2 class="tabs">@eventItem.Summary, @when </h2>
+                        <h2 class="tabs">@when </h2>
                     }
                 }
                 else if (!String.IsNullOrEmpty(when))
@@ -61,18 +49,33 @@
 <button class="accordion">Advanced Obedience</button>
 <div class="panel">
     <p>
+
         @if (Model.Items != null && Model.Items.Count > 0)
         {
             foreach (var eventItem in Model.Items)
             {
                 string when = eventItem.Start.DateTime.ToString();
+
                 if (String.IsNullOrEmpty(when))
                 {
                     when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Advanced Obedience")
+                    {
+                        <h2 class="tabs">@when </h2>
+                    }
                 }
-                if (@eventItem.Summary == "Advanced Obedience")
+                else if (!String.IsNullOrEmpty(when))
                 {
-                    <h2 class="tabs">@eventItem.Summary, @when</h2>
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Basic Obedience")
+                    {
+                        <h2 class="tabs"> @when, @time</h2>
+                    }
                 }
             }
         }
@@ -84,11 +87,123 @@
     </p>
 </div>
 
-<button class="accordion">Section 3</button>
+<button class="accordion">Private One On One Training Sessions</button>
 <div class="panel">
     <p>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Advanced Obedience")
+                    {
+                        <h2 class="tabs">@when </h2>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        <h2 class="tabs"> @when, @time</h2>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <h2>No upcoming events found.</h2>
+        }
+    </p>
+</div>
 
 
+<button class="accordion">AKC Testing: AKC Trick Dog Testing</button>
+<div class="panel">
+    <p>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                    {
+                        <h2 class="tabs">@when </h2>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        <h2 class="tabs"> @when, @time</h2>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <h2>No upcoming events found.</h2>
+        }
+    </p>
+</div>
+
+
+
+<button class="accordion">Puppy Beginners Class</button>
+<div class="panel">
+    <p>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Puppy Beginners Class")
+                    {
+                        <h2 class="tabs">@when </h2>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        <h2 class="tabs"> @when, @time</h2>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <h2>No upcoming events found.</h2>
+        }
     </p>
 </div>
 
@@ -112,39 +227,39 @@
 
 
 
-@if (Model.Items != null && Model.Items.Count > 0)
-{
-    foreach (var eventItem in Model.Items)
+@*@if (Model.Items != null && Model.Items.Count > 0)
     {
-        string when = eventItem.Start.DateTime.ToString();
-        if (String.IsNullOrEmpty(when))
+        foreach (var eventItem in Model.Items)
         {
-            when = eventItem.Start.Date;
-        }
-        if (@eventItem.Summary == "Basic Obedience")
-        {
-            <h2 class="tabs">@eventItem.Summary, @when</h2>
+            string when = eventItem.Start.DateTime.ToString();
+            if (String.IsNullOrEmpty(when))
+            {
+                when = eventItem.Start.Date;
+            }
+            if (@eventItem.Summary == "Basic Obedience")
+            {
+                <h2 class="tabs">@eventItem.Summary, @when</h2>
+            }
         }
     }
-}
 
 
-@if (Model.Items != null && Model.Items.Count > 0)
-{
-    foreach (var eventItem in Model.Items)
+    @if (Model.Items != null && Model.Items.Count > 0)
     {
-        string when = eventItem.Start.DateTime.ToString();
-        if (String.IsNullOrEmpty(when))
+        foreach (var eventItem in Model.Items)
         {
-            when = eventItem.Start.Date;
-        }
-        if (@eventItem.Summary == "Advanced Obedience")
-        {
-            <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
+            string when = eventItem.Start.DateTime.ToString();
+            if (String.IsNullOrEmpty(when))
+            {
+                when = eventItem.Start.Date;
+            }
+            if (@eventItem.Summary == "Advanced Obedience")
+            {
+                <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
+            }
         }
     }
-}
-else
-{
-    <h2>No upcoming events found.</h2>
-}
+    else
+    {
+        <h2>No upcoming events found.</h2>
+    }*@
