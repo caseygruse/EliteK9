@@ -252,6 +252,7 @@
     <Content Include="Css\HomePageCss.css" />
     <Content Include="Css\Schedule.css" />
     <Content Include="Css\servicesCss.css" />
+    <Content Include="EventAccordion.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -1,7 +1,116 @@
 ﻿@model Google.Apis.Calendar.v3.Data.Events
+@*@model EliteK9.Models.CalendarEvents*@
 <head>
     <link href="~/Css/eventStylingCss.css" rel="Stylesheet" type="text/css" />
+
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="accordion">Basic Obedience</button>
+<div class="panel">
+    <p>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Basic Obedience")
+                    {
+                        <h2 class="tabs">@eventItem.Summary, @when </h2>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Basic Obedience")
+                    {
+                        <h2 class="tabs"> @when, @time</h2>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <h2>No upcoming events found.</h2>
+        }
+    </p>
+</div>
+
+<button class="accordion">Advanced Obedience</button>
+<div class="panel">
+    <p>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                }
+                if (@eventItem.Summary == "Advanced Obedience")
+                {
+                    <h2 class="tabs">@eventItem.Summary, @when</h2>
+                }
+            }
+        }
+        else
+        {
+            <h2>No upcoming events found.</h2>
+        }
+
+    </p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <p>
+
+
+    </p>
+</div>
+
+
+
+
+
+
+
+
+<script src="~/EventAccordion.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 
 @if (Model.Items != null && Model.Items.Count > 0)
 {
@@ -17,7 +126,11 @@
             <h2 class="tabs">@eventItem.Summary, @when</h2>
         }
     }
+}
 
+
+@if (Model.Items != null && Model.Items.Count > 0)
+{
     foreach (var eventItem in Model.Items)
     {
         string when = eventItem.Start.DateTime.ToString();
@@ -27,7 +140,7 @@
         }
         if (@eventItem.Summary == "Advanced Obedience")
         {
-           <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
+            <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
         }
     }
 }

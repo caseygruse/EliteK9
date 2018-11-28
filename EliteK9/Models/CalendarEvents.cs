@@ -9,7 +9,7 @@ namespace EliteK9.Models
     {
         public string Title { get; set; }
 
-        public string When { get; set; }
-
+        public string Date { get; set; }
+       
     }
 }
