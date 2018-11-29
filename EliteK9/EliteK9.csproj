@@ -329,6 +329,7 @@
     <Content Include="Views\Scheduling\Services.cshtml" />
     <Content Include="Views\Scheduling\Schedule.cshtml" />
     <Content Include="Views\Scheduling\CalendarEvents.cshtml" />
+    <Content Include="Views\Home\Trainers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
