@@ -1,3 +1,8 @@
 ﻿#emailForm{
     margin-left: 15px;
 }
+.title {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
