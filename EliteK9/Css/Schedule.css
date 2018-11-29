@@ -6,3 +6,7 @@
     font-weight: bold;
     font-size: 30px;
 }
+
+.emailBg {
+    background: rgba(0, 0, 0, 0.5);
+}
