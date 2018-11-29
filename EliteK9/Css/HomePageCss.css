@@ -168,6 +168,11 @@ body {
         font-weight: bold;
     }
 
+.title {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
 
 /*
  * Footer
