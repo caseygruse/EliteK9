@@ -30,6 +30,8 @@ h1 {
 
 /* Links */
 
+
+
 .btnSpacing{
     margin-top: 60px;
 }
@@ -159,6 +161,12 @@ body {
 /*
  * Cover
  */
+
+.title {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
 
 .cover {
     padding: 0 20px;
