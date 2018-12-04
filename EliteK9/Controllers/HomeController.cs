@@ -26,5 +26,10 @@ namespace EliteK9.Controllers
 
             return View();
         }
+
+        public ActionResult Trainers()
+        {
+            return View();
+        }
     }
 }

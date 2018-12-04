@@ -36,10 +36,54 @@
     padding: 5px;
     text-align: center;
     font-size: large;
-    color: black;
+   
 }
 
 #warning{
     color: black;
     font: archivo;
+}
+
+
+
+
+
+
+
+
+.how-section1 {
+    margin-top: -15%;
+    padding: 10%;
+}
+
+    .how-section1 h4 {
+        color: #ffa500;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .how-section1 .subheading {
+        color: #3931af;
+        font-size: 20px;
+    }
+
+    .how-section1 .row {
+        margin-top: 10%;
+    }
+
+.how-img {
+    text-align: center;
+}
+
+    .how-img img {
+        width: 40%;
+    }
+
+.rowSpace{
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+.image {
+    border: 2px solid #ffa500;
 }

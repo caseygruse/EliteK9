@@ -1,5 +1,6 @@
 ﻿using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System;
@@ -16,7 +17,7 @@ namespace EliteK9.Models
     public static class Calendar
     {
 
-        public static Google.Apis.Calendar.v3.Data.Events GetCalendarEvents()
+        public static Events GetCalendarEvents()
         {
             string[] Scopes = { CalendarService.Scope.CalendarReadonly };
             string ApplicationName = "EliteK9";
@@ -55,7 +56,7 @@ namespace EliteK9.Models
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
             // List events.
-            Google.Apis.Calendar.v3.Data.Events events = request.Execute();
+            Events events = request.Execute();
             return events;
         }
     }
