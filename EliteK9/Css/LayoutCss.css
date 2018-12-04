@@ -1,0 +1,19 @@
+﻿body {
+}
+
+/*@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Philosopher-Regular.ttf);
+}*/
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Philosopher-Regular.ttf);
+}
+
+.title {
+color: #ffa500 !important;
+font-family: myFirstFont;
+  
+}
+

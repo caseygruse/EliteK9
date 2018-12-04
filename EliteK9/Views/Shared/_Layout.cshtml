@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Css/LayoutCss.css" rel="stylesheet">
 
     <title>@ViewBag.Title Elite_K9</title>
     @Styles.Render("~/Content/css")
@@ -21,11 +22,12 @@
                     <span class="icon-bar"></span>
                 </button>
                 <img src="~/images/pawPrint.png" />
-                @Html.ActionLink("Elite k9", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Elite k_9", "Index", "Home", new { area = "" }, new { @class = "navbar-brand title" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Services", "Services", "Scheduling")</li>
+                    <li>@Html.ActionLink("Class Descriptions", "Services", "Scheduling")</li>
+                    <li>@Html.ActionLink("Class Dates", "Schedule", "Scheduling")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
