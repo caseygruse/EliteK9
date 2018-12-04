@@ -250,6 +250,7 @@
     <Content Include="Css\AboutCss.css" />
     <Content Include="Css\eventStylingCss.css" />
     <Content Include="Css\HomePageCss.css" />
+    <Content Include="Css\LayoutCss.css" />
     <Content Include="Css\Schedule.css" />
     <Content Include="Css\servicesCss.css" />
     <Content Include="EventAccordion.js" />
@@ -281,6 +282,10 @@
     <Content Include="credentials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\Philosopher-Bold.ttf" />
+    <Content Include="fonts\Philosopher-BoldItalic.ttf" />
+    <Content Include="fonts\Philosopher-Italic.ttf" />
+    <Content Include="fonts\Philosopher-Regular.ttf" />
     <None Include="Properties\PublishProfiles\Test2EliteK9 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
