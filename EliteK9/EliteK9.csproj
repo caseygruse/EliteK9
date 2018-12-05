@@ -275,6 +275,7 @@
     <Content Include="images\test3.PNG" />
     <Content Include="images\test4.PNG" />
     <Content Include="images\test5.PNG" />
+    <Content Include="JS\HomePage.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -339,6 +340,7 @@
     <Content Include="Views\Scheduling\Schedule.cshtml" />
     <Content Include="Views\Scheduling\CalendarEvents.cshtml" />
     <Content Include="Views\Home\Trainers.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
