@@ -1,19 +1,29 @@
 ﻿#emailForm{
     margin-left: 15px;
 }
-.title {
+.pageTitle {
     color: #ffa500;
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.emailForm{
+    margin-left: 40px;
 }
 
 .emailBg {
-    background: rgba(0, 0, 0, 0.5);
+  
 }
 
 .emailImage {
     margin-right: 20px;
     margin-bottom: 50px;
     border: 3px solid #ffa500;
+}
+
+.rowSpace{
+    margin-bottom:30px;
 }
