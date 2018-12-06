@@ -180,7 +180,9 @@ header {
     -ms-transition: height 0.3s;
     -o-transition: height 0.3s;
     transition: height 0.3s;
-    background: url("/images/huskie.jpeg") no-repeat center center fixed;
+    
+    
+    
 }
 
     header h1#logo {
