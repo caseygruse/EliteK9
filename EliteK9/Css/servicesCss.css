@@ -5,6 +5,14 @@
     font-size: xx-large;
 }
 
+.warningHeading {
+    color: #ffa500;
+    margin-top: 50px;
+}
+.warningText {
+    color: #3931af;
+}
+
 .classHeader{
     text-align: center;
     font-weight: bold;
@@ -47,10 +55,6 @@
 
 
 
-
-
-
-
 .how-section1 {
     margin-top: -15%;
     padding: 10%;
@@ -67,7 +71,7 @@
         font-size: 20px;
     }
 
-    .how-section1 .row {
+    .how-section1  {
         margin-top: 10%;
     }
 
@@ -75,15 +79,23 @@
     text-align: center;
 }
 
-    .how-img img {
-        width: 40%;
-    }
+.how-img {
+    width: 40%;
+}    
 
 .rowSpace{
-    margin-top: 30px;
-    margin-bottom: 45px;
+    
+    
 }
 
 .image {
     border: 2px solid #ffa500;
+    width: 100%;  
+}
+
+.dateLink {
+    color: lightblue;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
 }
