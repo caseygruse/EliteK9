@@ -233,7 +233,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Calendar.cs" />
+    <Compile Include="Models\CalendarEvents.cs" />
     <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\EventHelper.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\SendGridEmail.cs" />
@@ -245,27 +247,42 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <None Include="Css\TrainersCss" />
     <Content Include="Css\AboutCss.css" />
+    <Content Include="Css\eventStylingCss.css" />
     <Content Include="Css\HomePageCss.css" />
+    <Content Include="Css\LayoutCss.css" />
     <Content Include="Css\Schedule.css" />
     <Content Include="Css\servicesCss.css" />
+    <Content Include="EventAccordion.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\animal-beach-bulldog-533009.jpg" />
-    <Content Include="images\homeDog1.jpeg" />
-    <Content Include="images\homeDog2.jpeg" />
-    <Content Include="images\homeDog3.jpeg" />
-    <Content Include="images\homeDogFill1.jpeg" />
-    <Content Include="images\homeDogfill2.jpeg" />
+    <Content Include="images\dog1.jpeg" />
+    <Content Include="images\dog10.jpeg" />
+    <Content Include="images\dog11.jpeg" />
+    <Content Include="images\dog12.jpeg" />
+    <Content Include="images\dog13.jpeg" />
+    <Content Include="images\dog14.jpeg" />
+    <Content Include="images\dog15.jpeg" />
+    <Content Include="images\dog16.jpeg" />
+    <Content Include="images\dog17.jpeg" />
+    <Content Include="images\dog18.jpeg" />
+    <Content Include="images\dog19.jpeg" />
+    <Content Include="images\dog2.jpeg" />
+    <Content Include="images\dog20.jpeg" />
+    <Content Include="images\dog3.jpeg" />
+    <Content Include="images\dog4.jpeg" />
+    <Content Include="images\dog5.jpeg" />
+    <Content Include="images\dog6.jpeg" />
+    <Content Include="images\dog7.jpeg" />
+    <Content Include="images\dog8.jpeg" />
+    <Content Include="images\dog9.jpeg" />
+    <Content Include="images\huskie.jpeg" />
     <Content Include="images\if_Facebook_571114.png" />
     <Content Include="images\pawPrint.png" />
-    <Content Include="images\pawPrintSquare.jpg" />
-    <Content Include="images\test1.PNG" />
-    <Content Include="images\test3.PNG" />
-    <Content Include="images\test4.PNG" />
-    <Content Include="images\test5.PNG" />
+    <Content Include="JS\HomePage.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -274,6 +291,10 @@
     <Content Include="credentials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\Philosopher-Bold.ttf" />
+    <Content Include="fonts\Philosopher-BoldItalic.ttf" />
+    <Content Include="fonts\Philosopher-Italic.ttf" />
+    <Content Include="fonts\Philosopher-Regular.ttf" />
     <None Include="Properties\PublishProfiles\Test2EliteK9 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -325,6 +346,8 @@
     <Content Include="Views\Scheduling\Services.cshtml" />
     <Content Include="Views\Scheduling\Schedule.cshtml" />
     <Content Include="Views\Scheduling\CalendarEvents.cshtml" />
+    <Content Include="Views\Home\Trainers.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

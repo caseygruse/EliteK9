@@ -60,7 +60,7 @@ a:hover {
 html,
 body {
     /*css for full size background image*/
-    background: url("/images/animal-beach-bulldog-533009.jpg") no-repeat center center fixed;
+    background: url("/images/huskie.jpeg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -70,7 +70,6 @@ body {
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
-    
 }
 
 .darkenBG {
@@ -177,6 +176,11 @@ body {
         font-weight: bold;
     }
 
+.title {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+}
 
 /*
  * Footer

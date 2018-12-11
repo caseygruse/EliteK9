@@ -1,19 +1,338 @@
 ﻿@model Google.Apis.Calendar.v3.Data.Events
+@*@model EliteK9.Models.CalendarEvents*@
+<head>
+    <link href="~/Css/eventStylingCss.css" rel="Stylesheet" type="text/css" />
+
+</head>
 
 
-@if (Model.Items != null && Model.Items.Count > 0)
-{
-    foreach (var eventItem in Model.Items)
-    {
-        string when = eventItem.Start.DateTime.ToString();
-        if (String.IsNullOrEmpty(when))
+<p class="classHeader">Basic Obedience</p>
+<div>
+    <ul>
+        @if (Model.Items != null && Model.Items.Count > 0)
         {
-            when = eventItem.Start.Date;
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Basic Obedience")
+                    {
+                        <li class="date">@when </li>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Basic Obedience")
+                    {
+                        <li class="date"> @when, @time</li>
+                    }
+                }
+            }
         }
-        <h2>@eventItem.Summary, @when</h2>
+        else
+        {
+            <li>No upcoming events found.</li>
+        }
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            int basic = 0;
+            foreach (var eventItem in Model.Items)
+            {
+                if (eventItem.Summary == "Basic Obedience")
+                {
+                    basic = 1;
+                }
+            }
+            if (basic == 0)
+            {
+                <li class="date">No classes scheduled but pleases contact us. </li>
+            }
+        }
+    </ul>
+</div>
+
+
+<p class="classHeader">Advanced Obedience</p>
+<div>
+    <ul>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Advanced Obedience")
+                    {
+                        <li class="date">@when </li>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Advanced Obedience")
+                    {
+                        <li class="date"> @when, @time</li>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <li class="date">No upcoming events found.</li="date">
+        }
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            int advanced = 0;
+            foreach (var eventItem in Model.Items)
+            {
+                if (eventItem.Summary == "Advanced Obedience")
+                {
+                    advanced = 1;
+                }
+            }
+            if (advanced == 0)
+            {
+                <li class="date">No classes scheduled but pleases contact us. </li>
+            }
+        }
+    </ul>
+</div>
+
+<p class="classHeader">Private One On One Training Sessions</p>
+<div>
+    <ul>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        <li class="date">@when </li>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        <li class="date"> @when, @time</li>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <li class="date">No upcoming events found.</li>
+        }
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            int one = 0;
+            foreach (var eventItem in Model.Items)
+            {
+                if (eventItem.Summary == "Private One On One Training Sessions")
+                {
+                    one = 1;
+                }
+            }
+            if (one == 0)
+            {
+                <li class="date">No classes scheduled but pleases contact us. </li>
+            }
+        }
+    </ul>
+</div>
+
+
+<p class="classHeader">AKC Testing: AKC Trick Dog Testing</p>
+<div>
+    <ul>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                    {
+                        <li class="date">@when </li>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                    {
+                        <li class="date"> @when, @time</li>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <li class="date">No upcoming events found.</li>
+        }
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            int akc = 0;
+            foreach (var eventItem in Model.Items)
+            {
+                if (eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                {
+                    akc = 1;
+                }
+            }
+            if (akc == 0)
+            {
+                <li class="date">No classes scheduled but pleases contact us. </li>
+            }
+        }
+    </ul>
+</div>
+
+
+
+<p class="classHeader">Puppy Beginners Class</p>
+<div>
+    <ul>
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            foreach (var eventItem in Model.Items)
+            {
+                string when = eventItem.Start.DateTime.ToString();
+
+                if (String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.Date;
+                    DateTime temp = Convert.ToDateTime(when);
+                    when = temp.ToString("MMMM dd");
+
+                    if (@eventItem.Summary == "Puppy Beginners Class")
+                    {
+                        <li class="date">@when </li>
+                    }
+                }
+                else if (!String.IsNullOrEmpty(when))
+                {
+                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                    if (@eventItem.Summary == "Puppy Beginners Class")
+                    {
+                        <li class="date"> @when, @time</li>
+                    }
+                }
+            }
+        }
+        else
+        {
+            <li>No upcoming events found.</li>
+        }
+        @if (Model.Items != null && Model.Items.Count > 0)
+        {
+            int puppy = 0;
+            foreach(var eventItem in Model.Items)
+            {
+                if(eventItem.Summary == "Puppy Beginners Class")
+                {
+                    puppy = 1;
+                }
+            }
+            if(puppy == 0)
+            {
+                <li class="date">No classes scheduled but pleases contact us. </li>
+            }
+        }
+        </ul>
+</div>
+
+
+
+
+
+
+
+
+<script src="~/EventAccordion.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+@*@if (Model.Items != null && Model.Items.Count > 0)
+    {
+        foreach (var eventItem in Model.Items)
+        {
+            string when = eventItem.Start.DateTime.ToString();
+            if (String.IsNullOrEmpty(when))
+            {
+                when = eventItem.Start.Date;
+            }
+            if (@eventItem.Summary == "Basic Obedience")
+            {
+                <h2 class="tabs">@eventItem.Summary, @when</h2>
+            }
+        }
     }
-}
-else
-{
-    <h2>No upcoming events found.</h2>
-}
+
+
+    @if (Model.Items != null && Model.Items.Count > 0)
+    {
+        foreach (var eventItem in Model.Items)
+        {
+            string when = eventItem.Start.DateTime.ToString();
+            if (String.IsNullOrEmpty(when))
+            {
+                when = eventItem.Start.Date;
+            }
+            if (@eventItem.Summary == "Advanced Obedience")
+            {
+                <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
+            }
+        }
+    }
+    else
+    {
+        <h2>No upcoming events found.</h2>
+    }*@

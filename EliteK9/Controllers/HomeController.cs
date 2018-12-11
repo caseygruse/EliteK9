@@ -8,6 +8,11 @@ namespace EliteK9.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult HomePage()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -24,6 +29,11 @@ namespace EliteK9.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Trainers()
+        {
             return View();
         }
     }

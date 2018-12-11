@@ -5,6 +5,14 @@
     font-size: xx-large;
 }
 
+.warningHeading {
+    color: #ffa500;
+    margin-top: 50px;
+}
+.warningText {
+    color: #3931af;
+}
+
 .classHeader{
     text-align: center;
     font-weight: bold;
@@ -36,10 +44,58 @@
     padding: 5px;
     text-align: center;
     font-size: large;
-    color: black;
+   
 }
 
 #warning{
     color: black;
     font: archivo;
+}
+
+
+
+
+.how-section1 {
+    margin-top: -15%;
+    padding: 10%;
+}
+
+    .how-section1 h4 {
+        color: #ffa500;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .how-section1 .subheading {
+        color: #3931af;
+        font-size: 20px;
+    }
+
+    .how-section1  {
+        margin-top: 10%;
+    }
+
+.how-img {
+    text-align: center;
+}
+
+.how-img {
+    width: 40%;
+}    
+
+.rowSpace{
+    
+    
+}
+
+.image {
+    border: 2px solid #ffa500;
+    width: 100%;  
+}
+
+.dateLink {
+    color: lightblue;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
 }
