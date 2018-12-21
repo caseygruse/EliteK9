@@ -1,229 +1,40 @@
-﻿
-/*
-.homeImage{
-    margin-top:20px;
-    margin-bottom:20px;
-    border: solid black 2px;
-    border-radius: 5%;
-}
-
-h1 {
-    font-family: 'Alegreya', serif;
-    font-weight: 700;
-    line-height: 46px;
-    font-size: 46px;
-    margin: 0 0 43px 0;
-    text-align: center;
-}
-
-*/
+﻿/*                      New Home page                     */
 
 
 /*
-
-* Based on Cover by https://twitter.com/mdo"  @mdo
-* added cover image and background color to match (green)
-*
-* Globals
-
-*/
-
-/* Links */
-
-
-
-.btnSpacing{
-    margin-top: 60px;
-}
-
-a,
-a:focus,
-a:hover {
-    color: #fff;
-}
-
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-    color: #333;
-    text-shadow: none; /* Prevent inheritence from `body` */
-    background-color: #fff;
-    border: 1px solid #fff;
-}
-
-
-/*
- * Base structure
+ * Start Bootstrap - Business Frontpage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
-html,
 body {
-    /*css for full size background image*/
-    background: url("/images/huskie.jpeg") no-repeat center center fixed;
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+
+.business-header {
+    height: 400px;
+    background: url('/images/dog21.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    height: 100%;
-    background-color: #060;
-    color: #fff;
+    -o-background-size: cover;
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #ffa500; /*#fff; */
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-.darkenBG {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    width: 100%;
-    height: 100%;
+.img-center {
+    margin: 0 auto;
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-    margin-top: 50px;
-    display: table;
-    width: 100%;
-    height: 100%; /* For at least Firefox */
-    min-height: 100%;
-    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
-}
-
-.site-wrapper-inner {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.cover-container {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-    padding: 30px;
-}
-
-
-/*
- * Header
- */
-.masthead-brand {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.masthead-nav > li {
-    display: inline-block;
-}
-
-    .masthead-nav > li + li {
-        margin-left: 20px;
-    }
-
-    .masthead-nav > li > a {
-        padding-right: 0;
-        padding-left: 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff; /* IE8 proofing */
-        color: rgba(255,255,255,.95);
-        border-bottom: 2px solid transparent;
-    }
-
-        .masthead-nav > li > a:hover,
-        .masthead-nav > li > a:focus {
-            background-color: transparent;
-            border-bottom-color: #a9a9a9;
-            border-bottom-color: rgba(255,255,255,.25);
-        }
-
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-    color: #fff;
-    border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-    .masthead-brand {
-        float: left;
-    }
-
-    .masthead-nav {
-        float: right;
-    }
-}
-
-
-/*
- * Cover
- */
-
-.title {
-    color: #ffa500;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.cover {
-    padding: 0 20px;
-}
-
-    .cover .btn-lg {
-        padding: 10px 20px;
-        font-weight: bold;
-    }
-
-.title {
-    color: #ffa500;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-/*
- * Footer
- */
-
-.mastfoot {
-    color: #999; /* IE8 proofing */
-    color: rgba(255,255,255,.5);
-}
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-    /* Pull out the header and footer */
-    .masthead {
-        position: fixed;
-        top: 0;
-    }
-
-    .mastfoot {
-        position: fixed;
-        bottom: 0;
-    }
-    /* Start the vertical centering */
-    .site-wrapper-inner {
-        vertical-align: middle;
-    }
-    /* Handle the widths */
-    .masthead,
-    .mastfoot,
-    .cover-container {
-        width: 100%; /* Must be percentage or pixels for horizontal alignment */
-    }
-}
-
-@media (min-width: 992px) {
-    .masthead,
-    .mastfoot,
-    .cover-container {
-        width: 700px;
-    }
+footer {
+    margin: 50px 0;
 }
 
