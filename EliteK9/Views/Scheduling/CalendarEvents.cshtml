@@ -40,7 +40,7 @@
         }
         else
         {
-            <li>No upcoming events found.</li>
+            <li>No upcoming events found but please contact us.</li>
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -95,7 +95,7 @@
         }
         else
         {
-            <li class="date">No upcoming events found.</li="date">
+            <li class="date">No upcoming events found but please contact us.</li="date">
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -149,7 +149,7 @@
         }
         else
         {
-            <li class="date">No upcoming events found.</li>
+            <li class="date">No upcoming events found but please contact us.</li>
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -204,7 +204,7 @@
         }
         else
         {
-            <li class="date">No upcoming events found.</li>
+            <li class="date">No upcoming events found but please contact us.</li>
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -260,7 +260,7 @@
         }
         else
         {
-            <li>No upcoming events found.</li>
+            <li>No upcoming events found but please contact us.</li>
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -287,52 +287,4 @@
 
 
 
-<script src="~/EventAccordion.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-@*@if (Model.Items != null && Model.Items.Count > 0)
-    {
-        foreach (var eventItem in Model.Items)
-        {
-            string when = eventItem.Start.DateTime.ToString();
-            if (String.IsNullOrEmpty(when))
-            {
-                when = eventItem.Start.Date;
-            }
-            if (@eventItem.Summary == "Basic Obedience")
-            {
-                <h2 class="tabs">@eventItem.Summary, @when</h2>
-            }
-        }
-    }
-
-
-    @if (Model.Items != null && Model.Items.Count > 0)
-    {
-        foreach (var eventItem in Model.Items)
-        {
-            string when = eventItem.Start.DateTime.ToString();
-            if (String.IsNullOrEmpty(when))
-            {
-                when = eventItem.Start.Date;
-            }
-            if (@eventItem.Summary == "Advanced Obedience")
-            {
-                <div> <h2 class="tabs">@eventItem.Summary </h2> <p>When: @when  </p></div>
-            }
-        }
-    }
-    else
-    {
-        <h2>No upcoming events found.</h2>
-    }*@
