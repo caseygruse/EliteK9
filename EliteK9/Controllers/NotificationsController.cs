@@ -39,7 +39,7 @@ namespace EliteK9.Controllers
             return View(notifications);   
         }
         /// <summary>
-        /// //////////////////////////////////////////////////////////////Finish
+        /// Deletes the selected Notification from the notifications page
         /// </summary>
         /// <returns></returns>
         public ActionResult Delete()
@@ -47,6 +47,17 @@ namespace EliteK9.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            Notifications Notification = NotificationDB.FindNotification(db, id);
 
+            if (Notification != null)
+            {
+                NotificationDB.DeleteNotification(db, Notification);
+                return RedirectToAction("Notifications");
+            }
+            return View();
+        }
     }
 }

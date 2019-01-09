@@ -26,5 +26,18 @@ namespace EliteK9.Models
             db.Notifications.Add(notifications);
             db.SaveChanges();
         }
+
+        public static void DeleteNotification(ApplicationDbContext db, Notifications notification)
+        {
+            
+            db.Notifications.Remove(notification);
+            db.SaveChanges();
+        }
+
+        public static Notifications FindNotification(ApplicationDbContext db, int id)
+        {
+            return db.Notifications.Find(id);
+
+        }
     }
 }
