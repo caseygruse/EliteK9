@@ -29,11 +29,11 @@
             @Html.DisplayFor(modelItem => item.NotificationText)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.NotificationID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.NotificationID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.NotificationID })
         </td>
     </tr>
 }
-
 </table>
+
+<br />
+@Html.ActionLink("Back to Admin Options", "AdminNavigation", "Admin")

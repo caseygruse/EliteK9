@@ -16,7 +16,11 @@ namespace EliteK9.Models
         {
             return (from a in db.FAQs select a).ToList();
         }
-
+        /// <summary>
+        /// adds a FAQ to the db
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="faq"></param>
         public static void AddFAQ(ApplicationDbContext db, FAQ faq)
         {
             db.FAQs.Add(faq);
