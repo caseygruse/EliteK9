@@ -27,17 +27,26 @@ namespace EliteK9.Models
             db.SaveChanges();
         }
 
+        /// <summary>
+        /// deletese a notification from the database
+        /// </summary>
+        /// <param name="db">db Context</param>
+        /// <param name="notification">notification from db</param>
         public static void DeleteNotification(ApplicationDbContext db, Notifications notification)
         {
             
             db.Notifications.Remove(notification);
             db.SaveChanges();
         }
-
+        /// <summary>
+        /// gets a single notification from the db using an id.
+        /// </summary>
+        /// <param name="db"></param>
+        /// <param name="id">id of desired notification.</param>
+        /// <returns></returns>
         public static Notifications FindNotification(ApplicationDbContext db, int id)
         {
             return db.Notifications.Find(id);
-
         }
     }
 }

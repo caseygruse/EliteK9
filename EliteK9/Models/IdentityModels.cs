@@ -31,5 +31,7 @@ namespace EliteK9.Models
         }
 
         public virtual DbSet<Notifications> Notifications { get; set; }
+
+        public virtual DbSet<FAQ> FAQs { get; set; }
     }
 }
