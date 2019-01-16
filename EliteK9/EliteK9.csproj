@@ -372,6 +372,7 @@
     <Content Include="Views\FAQ\Create.cshtml" />
     <Content Include="Views\FAQ\Delete.cshtml" />
     <Content Include="Views\Home\UserNotifications.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

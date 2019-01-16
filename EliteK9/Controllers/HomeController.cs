@@ -44,5 +44,10 @@ namespace EliteK9.Controllers
         {
             return PartialView(NotificationDB.GetNotifications(db));
         }
+
+        public ActionResult FAQ()
+        {
+            return View(FAQDB.GetAllFAQ(db));
+        }
     }
 }
