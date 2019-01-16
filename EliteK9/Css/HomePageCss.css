@@ -16,6 +16,8 @@ body {
 .business-header {
     height: 400px;
     background: url('/images/dog21.jpg') center center no-repeat scroll;
+    margin-top: 25px;
+    border: 4px solid #ffa500; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -32,6 +34,7 @@ body {
 
 .img-center {
     margin: 0 auto;
+    border: 4px solid #ffa500;
 }
 
 footer {
