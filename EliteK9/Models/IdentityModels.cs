@@ -29,5 +29,9 @@ namespace EliteK9.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<Notifications> Notifications { get; set; }
+
+        public virtual DbSet<FAQ> FAQs { get; set; }
     }
 }

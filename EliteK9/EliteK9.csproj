@@ -220,6 +220,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SchedulingController.cs" />
@@ -230,14 +233,26 @@
     <Compile Include="Migrations\201810312249303_changedMessageInEmail.Designer.cs">
       <DependentUpon>201810312249303_changedMessageInEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901041944099_addedNotifications.cs" />
+    <Compile Include="Migrations\201901041944099_addedNotifications.Designer.cs">
+      <DependentUpon>201901041944099_addedNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901111739331_AddedFAQ.cs" />
+    <Compile Include="Migrations\201901111739331_AddedFAQ.Designer.cs">
+      <DependentUpon>201901111739331_AddedFAQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Calendar.cs" />
     <Compile Include="Models\CalendarEvents.cs" />
     <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\EventHelper.cs" />
+    <Compile Include="Models\FAQ.cs" />
+    <Compile Include="Models\FAQDB.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NotificationDB.cs" />
+    <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\SendGridEmail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -272,6 +287,7 @@
     <Content Include="images\dog19.jpeg" />
     <Content Include="images\dog2.jpeg" />
     <Content Include="images\dog20.jpeg" />
+    <Content Include="images\dog21.jpg" />
     <Content Include="images\dog3.jpeg" />
     <Content Include="images\dog4.jpeg" />
     <Content Include="images\dog5.jpeg" />
@@ -348,6 +364,15 @@
     <Content Include="Views\Scheduling\CalendarEvents.cshtml" />
     <Content Include="Views\Home\Trainers.cshtml" />
     <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Notifications\Notifications.cshtml" />
+    <Content Include="Views\Notifications\Create.cshtml" />
+    <Content Include="Views\Notifications\Delete.cshtml" />
+    <Content Include="Views\Admin\AdminNavigation.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
+    <Content Include="Views\FAQ\Create.cshtml" />
+    <Content Include="Views\FAQ\Delete.cshtml" />
+    <Content Include="Views\Home\UserNotifications.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -371,6 +396,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810312249303_changedMessageInEmail.resx">
       <DependentUpon>201810312249303_changedMessageInEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901041944099_addedNotifications.resx">
+      <DependentUpon>201901041944099_addedNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901111739331_AddedFAQ.resx">
+      <DependentUpon>201901111739331_AddedFAQ.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

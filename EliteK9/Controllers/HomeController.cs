@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EliteK9.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace EliteK9.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult HomePage()
         {
             return View();
@@ -35,6 +38,16 @@ namespace EliteK9.Controllers
         public ActionResult Trainers()
         {
             return View();
+        }
+
+        public PartialViewResult UserNotifications()
+        {
+            return PartialView(NotificationDB.GetNotifications(db));
+        }
+
+        public ActionResult FAQ()
+        {
+            return View(FAQDB.GetAllFAQ(db));
         }
     }
 }

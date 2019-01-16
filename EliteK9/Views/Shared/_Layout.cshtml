@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <img src="~/images/pawPrint.png" />
-                @Html.ActionLink("Elite k_9", "Index", "Home", new { area = "" }, new { @class = "navbar-brand title" })
+                @Html.ActionLink("Elite K_9", "Index", "Home", new { area = "" }, new { @class = "navbar-brand title" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,6 +30,7 @@
                     <li>@Html.ActionLink("Class Dates", "Schedule", "Scheduling")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Admin", "AdminNavigation", "Admin")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
                 <img src="~/images/pawPrint.png" />
