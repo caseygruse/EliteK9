@@ -9,6 +9,11 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    @RenderSection("head", false)
+
+    @* RenderSection specifies what section you want rendered and where.
+        you create the section on another page and call render see FAQ for example*@
+
 </head>
 <body>
     
@@ -30,6 +35,7 @@
                     <li>@Html.ActionLink("Class Dates", "Schedule", "Scheduling")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "FAQ", "Home")</li>
                     <li>@Html.ActionLink("Admin", "AdminNavigation", "Admin")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -48,5 +54,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    
+    
 </body>
 </html>
