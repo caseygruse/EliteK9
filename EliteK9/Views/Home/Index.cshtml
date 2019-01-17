@@ -3,11 +3,10 @@
 }
 
 
-<!-- Image Background Page Header -->
-<!-- Note: The background image is set within the business-casual.css file. -->
-<head>
+@section head{
     <link href="~/Css/HomePageCss.css" rel="stylesheet" id="bootstrap-css">
-</head>
+}
+
 <header class="business-header">
     <div class="container">
         <div class="row">
@@ -80,11 +79,13 @@
 </div>
 <!-- /.container -->
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 
+@section scripts{
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+}
 
 
 

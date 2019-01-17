@@ -1,12 +1,16 @@
 ﻿@model EliteK9.Models.EmailModel
 
 
+@section head{
+    <link href="~/Css/Schedule.css" rel="stylesheet" type="text/css" />
+}
+
 @{
     ViewBag.Title = "Schedule";
 }
-<head>
-    <link href="~/Css/Schedule.css" rel="stylesheet" type="text/css"/>
-</head>
+
+
+
 
 <h2 class="pageTitle">Schedule</h2>
 
@@ -17,64 +21,64 @@
         @Html.Action("CalendarEvents", "Scheduling")
     </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-                <br />
-                <div class="form-horizontal emailForm">
-                    <h4>Send us an email to RSVP</h4>
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                        <label class="control-label col-md-2">Email:</label>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.SendersEmail, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.SendersEmail, "", new { @class = "text-danger" })
-                        </div>
+            <br />
+            <div class="form-horizontal emailForm">
+                <h4>Send us an email to RSVP</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label class="control-label col-md-2">Email:</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.SendersEmail, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SendersEmail, "", new { @class = "text-danger" })
                     </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-md-2">First Name:</label>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-md-2">Last Name:</label>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-md-2">Message</label>
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Send Email" class="btn btn-default" />
-                        </div>
-                    </div>
-                    <h4 class="col-md-offset-2">@ViewBag.sent</h4>
                 </div>
-            }
-        </div>
-        @*<div class="col-lg-6 col-md-6 col-sm-12">
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">First Name:</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Last Name:</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Message</label>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Send Email" class="btn btn-default" />
+                    </div>
+                </div>
+                <h4 class="col-md-offset-2">@ViewBag.sent</h4>
+            </div>
+        }
+    </div>
+    @*<div class="col-lg-6 col-md-6 col-sm-12">
             <div style="margin-top: 80px; margin-bottom: 20px">
                 <img class="emailImage" src="~/images/homeDog1.jpeg" alt="EliteK_9 dog" />
                 <img class="emailImage" src="~/images/44573.jpeg" alt="EliteK_9 dog" />
             </div>
         </div>*@
-    
+
 </div>
 <div>
     @Html.ActionLink("Class Descriptions", "Services")

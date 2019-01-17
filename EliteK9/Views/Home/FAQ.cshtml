@@ -4,17 +4,13 @@
     ViewBag.Title = "FAQ";
 }
 
-@section head{
-    @*<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>*@
-    
+@section head{   
     <link href="~/Css/FAQCss.css" rel="stylesheet" id="bootstrap-css">
 }
 @*Im choosing to add the section head content to the layouts head.*@
 
 
 <h2>FAQ</h2>
-
-
 
 @foreach (var item in Model)
 {
@@ -23,7 +19,7 @@
         <div class="faq">
             <div class="faq_question"> @Html.DisplayFor(modelItem => item.Question)</div>
             <div class="faq_answer_container">
-                <div class="faq_answer">@Html.DisplayFor(modelItem => item.Answer)</div>
+                <div class="faq_answer">&nbsp; &nbsp; &nbsp; &nbsp; @Html.DisplayFor(modelItem => item.Answer)</div>
             </div>
         </div>
     </div>
