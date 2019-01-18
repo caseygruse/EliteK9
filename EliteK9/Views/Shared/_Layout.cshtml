@@ -36,7 +36,11 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("FAQ", "FAQ", "Home")</li>
-                    <li>@Html.ActionLink("Admin", "AdminNavigation", "Admin")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Admin", "AdminNavigation", "Admin")</li>
+                    }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
                 <img src="~/images/pawPrint.png" />
