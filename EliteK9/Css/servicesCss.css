@@ -25,6 +25,7 @@
 }
 
 .hrStyle{
+    margin: 0;
     border: 0;
     height: 1px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -45,6 +46,7 @@
     padding: 5px;
     text-align: center;
     font-size: large;
+    
    
 }
 
@@ -59,6 +61,7 @@
 .how-section1 {
     margin-top: -15%;
     padding: 10%;
+    padding-top: 5%;
 }
 
     .how-section1 h4 {
@@ -98,5 +101,6 @@
     color: lightblue;
     font-weight: bold;
     text-align: center;
-    margin-top: 15px;
+    margin: 0;
+
 }
