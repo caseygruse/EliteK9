@@ -1,9 +1,9 @@
 ﻿@model Google.Apis.Calendar.v3.Data.Events
-@*@model EliteK9.Models.CalendarEvents*@
+
 <head>
     <link href="~/Css/eventStylingCss.css" rel="Stylesheet" type="text/css" />
-
 </head>
+
 
 
 <p class="classHeader">Basic Obedience</p>
@@ -95,7 +95,7 @@
         }
         else
         {
-            <li class="date">No upcoming events found but please contact us.</li="date">
+            <li class="date">No upcoming events found but please contact us.</li>
         }
         @if (Model.Items != null && Model.Items.Count > 0)
         {
@@ -265,19 +265,19 @@
         @if (Model.Items != null && Model.Items.Count > 0)
         {
             int puppy = 0;
-            foreach(var eventItem in Model.Items)
+            foreach (var eventItem in Model.Items)
             {
-                if(eventItem.Summary == "Puppy Beginners Class")
+                if (eventItem.Summary == "Puppy Beginners Class")
                 {
                     puppy = 1;
                 }
             }
-            if(puppy == 0)
+            if (puppy == 0)
             {
                 <li class="date">No classes scheduled but pleases contact us. </li>
             }
         }
-        </ul>
+    </ul>
 </div>
 
 

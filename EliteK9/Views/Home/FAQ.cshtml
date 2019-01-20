@@ -4,36 +4,30 @@
     ViewBag.Title = "FAQ";
 }
 
+@section head{   
+    <link href="~/Css/FAQCss.css" rel="stylesheet" id="bootstrap-css">
+}
+@*Im choosing to add the section head content to the layouts head.*@
+
+
 <h2>FAQ</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Question)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Answer)
-        </th>
-        <th></th>
-    </tr>
+@foreach (var item in Model)
+{
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Question)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Answer)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.QuestionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.QuestionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.QuestionID })
-        </td>
-    </tr>
+    <div class="faq_container">
+        <div class="faq">
+            <div class="faq_question"> @Html.DisplayFor(modelItem => item.Question)</div>
+            <div class="faq_answer_container">
+                <div class="faq_answer">&nbsp; &nbsp; &nbsp; &nbsp; @Html.DisplayFor(modelItem => item.Answer)</div>
+            </div>
+        </div>
+    </div>
 }
 
-</table>
+
+@section scripts{
+    <script type="text/javascript" src="~/JS/FAQ.js"></script>
+}
+@* adding this script which is now rendered on layout page after its script contents.*@
+

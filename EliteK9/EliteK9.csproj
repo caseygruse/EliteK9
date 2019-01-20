@@ -265,6 +265,7 @@
     <None Include="Css\TrainersCss" />
     <Content Include="Css\AboutCss.css" />
     <Content Include="Css\eventStylingCss.css" />
+    <Content Include="Css\FAQCss.css" />
     <Content Include="Css\HomePageCss.css" />
     <Content Include="Css\LayoutCss.css" />
     <Content Include="Css\Schedule.css" />
@@ -298,6 +299,7 @@
     <Content Include="images\huskie.jpeg" />
     <Content Include="images\if_Facebook_571114.png" />
     <Content Include="images\pawPrint.png" />
+    <Content Include="JS\FAQ.js" />
     <Content Include="JS\HomePage.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -363,7 +365,6 @@
     <Content Include="Views\Scheduling\Schedule.cshtml" />
     <Content Include="Views\Scheduling\CalendarEvents.cshtml" />
     <Content Include="Views\Home\Trainers.cshtml" />
-    <Content Include="Views\Home\HomePage.cshtml" />
     <Content Include="Views\Notifications\Notifications.cshtml" />
     <Content Include="Views\Notifications\Create.cshtml" />
     <Content Include="Views\Notifications\Delete.cshtml" />
