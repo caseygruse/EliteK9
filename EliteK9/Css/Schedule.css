@@ -27,3 +27,11 @@
 .rowSpace{
     margin-bottom:30px;
 }
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.messageBox {
+    min-height: 120px;
+}
