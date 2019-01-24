@@ -1,10 +1,7 @@
 ﻿body {
 }
 
-/*@font-face {
-    font-family: myFirstFont;
-    src: url(../fonts/Philosopher-Regular.ttf);
-}*/
+
 
 @font-face {
     font-family: myFirstFont;
@@ -19,5 +16,18 @@ font-family: myFirstFont;
 
 .navbar {
     box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    background-color: white;
+    width: 100%;
+    
+}
+
+.copyright{
+    padding-left: 50%;
 }
 

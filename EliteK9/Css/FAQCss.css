@@ -7,10 +7,30 @@
     display: inline-block;
     cursor: pointer;
     font-weight: bold;
+    font-size: larger;
+    color: #3931af;
+    
+}
+.faq_question:hover {
+    color: #ffa500;
+}
+
+.faq_answer{
+    font-size: large;
+    
 }
 
 .faq_answer_container {
     height: 0px;
     overflow: hidden;
     padding: 0px;
+}
+
+.pageTitle {
+    color: #ffa500;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
 }
