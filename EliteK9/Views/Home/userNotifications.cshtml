@@ -7,10 +7,10 @@
 
 @foreach (var item in Model) {
     <div class="row">
-        <div class="col-lg-2" style="font-size: larger">
+        <div class="col-lg-2" style="font-size: larger;  font-weight: bold">
             @Html.DisplayFor(modelItem => item.Title)  -
         </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10" >
             @Html.DisplayFor(modelItem => item.NotificationText)
         </div>
     </div>
