@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -36,6 +36,7 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("FAQ", "FAQ", "Home")</li>
+                    <li>@Html.ActionLink("Trainers", "Trainers", "Home")</li>
                     @if (Request.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Admin", "AdminNavigation", "Admin")</li>
@@ -50,15 +51,15 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Elite K9</p>
-        </footer>
     </div>
+    <footer>
+        <p class="copyright">&copy; @DateTime.Now.Year - Elite K9 </p>   
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    
-    
+
+
 </body>
 </html>
