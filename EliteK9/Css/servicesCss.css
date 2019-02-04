@@ -5,6 +5,10 @@
     font-size: xx-large;
 }
 
+.description {
+    font-size: larger;
+}   
+
 .warningHeading {
     color: #ffa500;
     margin-top: 50px;
