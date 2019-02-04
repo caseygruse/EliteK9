@@ -1,6 +1,8 @@
-﻿#emailForm{
-    margin-left: 15px;
+﻿
+#descriptionLink {
+    margin-top: 20px;
 }
+
 .pageTitle {
     color: #ffa500;
     font-weight: bold;
@@ -13,6 +15,7 @@
 iframe{
     width: 100%;
     height: 100%;
+    margin-bottom: 15px;
 }
 
 .embeddedCalendar {
@@ -21,6 +24,7 @@ iframe{
 
 .emailForm{
     margin: 0px;
+    margin-bottom: 40px;
 }
 
 .emailBg {
@@ -44,4 +48,13 @@ iframe{
 
 .messageBox {
     min-height: 120px;
+}
+
+
+hr{
+    visibility: hidden;
+}
+
+#formLine {
+    visibility: visible;
 }
