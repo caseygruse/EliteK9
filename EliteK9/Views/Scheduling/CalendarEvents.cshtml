@@ -115,117 +115,6 @@
     </ul>
 </div>
 
-<p class="classHeader">Private One On One Training Sessions</p>
-<div>
-    <ul>
-        @if (Model.Items != null && Model.Items.Count > 0)
-        {
-            foreach (var eventItem in Model.Items)
-            {
-                string when = eventItem.Start.DateTime.ToString();
-
-                if (String.IsNullOrEmpty(when))
-                {
-                    when = eventItem.Start.Date;
-                    DateTime temp = Convert.ToDateTime(when);
-                    when = temp.ToString("MMMM dd");
-
-                    if (@eventItem.Summary == "Private One On One Training Sessions")
-                    {
-                        <li class="date">@when </li>
-                    }
-                }
-                else if (!String.IsNullOrEmpty(when))
-                {
-                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
-                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
-
-                    if (@eventItem.Summary == "Private One On One Training Sessions")
-                    {
-                        <li class="date"> @when, @time</li>
-                    }
-                }
-            }
-        }
-        else
-        {
-            <li class="date">No upcoming events found but please contact us.</li>
-        }
-        @if (Model.Items != null && Model.Items.Count > 0)
-        {
-            int one = 0;
-            foreach (var eventItem in Model.Items)
-            {
-                if (eventItem.Summary == "Private One On One Training Sessions")
-                {
-                    one = 1;
-                }
-            }
-            if (one == 0)
-            {
-                <li class="date">No classes scheduled but pleases contact us. </li>
-            }
-        }
-    </ul>
-</div>
-
-
-<p class="classHeader">AKC Testing: AKC Trick Dog Testing</p>
-<div>
-    <ul>
-        @if (Model.Items != null && Model.Items.Count > 0)
-        {
-            foreach (var eventItem in Model.Items)
-            {
-                string when = eventItem.Start.DateTime.ToString();
-
-                if (String.IsNullOrEmpty(when))
-                {
-                    when = eventItem.Start.Date;
-                    DateTime temp = Convert.ToDateTime(when);
-                    when = temp.ToString("MMMM dd");
-
-                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
-                    {
-                        <li class="date">@when </li>
-                    }
-                }
-                else if (!String.IsNullOrEmpty(when))
-                {
-                    when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
-                    string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
-
-                    if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
-                    {
-                        <li class="date"> @when, @time</li>
-                    }
-                }
-            }
-        }
-        else
-        {
-            <li class="date">No upcoming events found but please contact us.</li>
-        }
-        @if (Model.Items != null && Model.Items.Count > 0)
-        {
-            int akc = 0;
-            foreach (var eventItem in Model.Items)
-            {
-                if (eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
-                {
-                    akc = 1;
-                }
-            }
-            if (akc == 0)
-            {
-                <li class="date">No classes scheduled but pleases contact us. </li>
-            }
-        }
-    </ul>
-</div>
-
-
-
 <p class="classHeader">Puppy Beginners Class</p>
 <div>
     <ul>
@@ -279,6 +168,136 @@
         }
     </ul>
 </div>
+
+<p class="classHeader">Private One On One Training Sessions</p>
+<div>
+    <ul>
+        <li class="date">
+            By appointment only so please contact us to schedule a visit.
+        </li>
+    </ul>
+</div>
+
+<p class="classHeader">AKC Testing: AKC Trick Dog Testing</p>
+<div>
+    <ul>
+        <li class="date">
+            By appointment only so please contact us to schedule a visit.
+        </li>
+    </ul>
+</div>
+
+@*<p class="classHeader">Private One On One Training Sessions</p>
+    <div>
+        <ul>
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                foreach (var eventItem in Model.Items)
+                {
+                    string when = eventItem.Start.DateTime.ToString();
+
+                    if (String.IsNullOrEmpty(when))
+                    {
+                        when = eventItem.Start.Date;
+                        DateTime temp = Convert.ToDateTime(when);
+                        when = temp.ToString("MMMM dd");
+
+                        if (@eventItem.Summary == "Private One On One Training Sessions")
+                        {
+                            <li class="date">@when </li>
+                        }
+                    }
+                    else if (!String.IsNullOrEmpty(when))
+                    {
+                        when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                        string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                        if (@eventItem.Summary == "Private One On One Training Sessions")
+                        {
+                            <li class="date"> @when, @time</li>
+                        }
+                    }
+                }
+            }
+            else
+            {
+                <li class="date">No upcoming events found but please contact us.</li>
+            }
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                int one = 0;
+                foreach (var eventItem in Model.Items)
+                {
+                    if (eventItem.Summary == "Private One On One Training Sessions")
+                    {
+                        one = 1;
+                    }
+                }
+                if (one == 0)
+                {
+                    <li class="date">No classes scheduled but pleases contact us. </li>
+                }
+            }
+        </ul>
+    </div>
+
+
+    <p class="classHeader">AKC Testing: AKC Trick Dog Testing</p>
+    <div>
+        <ul>
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                foreach (var eventItem in Model.Items)
+                {
+                    string when = eventItem.Start.DateTime.ToString();
+
+                    if (String.IsNullOrEmpty(when))
+                    {
+                        when = eventItem.Start.Date;
+                        DateTime temp = Convert.ToDateTime(when);
+                        when = temp.ToString("MMMM dd");
+
+                        if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                        {
+                            <li class="date">@when </li>
+                        }
+                    }
+                    else if (!String.IsNullOrEmpty(when))
+                    {
+                        when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
+                        string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
+
+                        if (@eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                        {
+                            <li class="date"> @when, @time</li>
+                        }
+                    }
+                }
+            }
+            else
+            {
+                <li class="date">No upcoming events found but please contact us.</li>
+            }
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                int akc = 0;
+                foreach (var eventItem in Model.Items)
+                {
+                    if (eventItem.Summary == "AKC Testing: AKC Trick Dog Testing")
+                    {
+                        akc = 1;
+                    }
+                }
+                if (akc == 0)
+                {
+                    <li class="date">No classes scheduled but pleases contact us. </li>
+                }
+            }
+        </ul>
+    </div>*@
+
+
+
 
 
 
