@@ -14,14 +14,10 @@ body {
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
-    height: 400px;
-    background: url('/images/dog21.jpg') center center no-repeat scroll;
-    margin-top: 25px;
-    border: 4px solid #ffa500;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    /*height: 238px;*/
+    /*background: url('/images/dog21.jpg') center center no-repeat scroll;*/
+    /*margin-top: 25px;
+    border: 4px solid #ffa500;*/  
 }
 
 /* Customize the text color and shadow color and to optimize text legibility. */
