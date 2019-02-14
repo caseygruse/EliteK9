@@ -15,7 +15,7 @@ font-family: myFirstFont;
 }
 
 .navbar {
-    box-shadow: inset 3px 3px 60px 6px rgb(255, 216, 0);
+    box-shadow: 3px 3px 60px 6px #ffa500;
 }
 
 footer {
