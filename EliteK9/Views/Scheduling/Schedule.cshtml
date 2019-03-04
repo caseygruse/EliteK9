@@ -20,7 +20,8 @@
         </div>
     </div>
     <div class="embeddedCalendar col-lg-6 col-sm-12">
-        <iframe src="https://calendar.google.com/calendar/embed?src=caseygruse1%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="yes"></iframe>
+        @*<iframe src="https://calendar.google.com/calendar/embed?src=caseygruse1%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="yes"></iframe>*@
+        <iframe src="https://calendar.google.com/calendar/embed?src=1bsqvetv4mdpqug5aqsv8rf3kc%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" frameborder="0" scrolling="yes"></iframe>
 
         @using (Html.BeginForm())
         {
@@ -28,7 +29,7 @@
             <br />
             <div class="form-horizontal emailForm">
                 <h4>Send us an email to RSVP</h4>
-                <hr id="formLine" /> 
+                <hr id="formLine" />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     <label class="control-label col-md-3">Email:</label>
