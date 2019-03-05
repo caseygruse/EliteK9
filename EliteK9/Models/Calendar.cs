@@ -52,7 +52,7 @@ namespace EliteK9.Models
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.MaxResults = 10;
+            request.MaxResults = 300;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
             // List events.

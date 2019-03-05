@@ -299,8 +299,11 @@
     <Content Include="images\dog8.jpeg" />
     <Content Include="images\dog9.jpeg" />
     <Content Include="images\f-ogo_RGB_HEX-58.png" />
+    <Content Include="images\hannaMyers.jpg" />
     <Content Include="images\huskie.jpeg" />
+    <Content Include="images\paulGrosart.jpg" />
     <Content Include="images\pawPrint.png" />
+    <Content Include="images\sarahPerry.jpg" />
     <Content Include="JS\FAQ.js" />
     <Content Include="JS\HomePage.js" />
     <Content Include="Scripts\bootstrap.js" />
