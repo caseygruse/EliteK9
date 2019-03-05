@@ -14,6 +14,7 @@
             foreach (var eventItem in Model.Items)
             {
                 string when = eventItem.Start.DateTime.ToString();
+                string description = eventItem.Description;
 
                 if (String.IsNullOrEmpty(when))
                 {
@@ -33,7 +34,7 @@
 
                     if (@eventItem.Summary == "Basic Obedience")
                     {
-                        <li class="date"> @when, @time</li>
+                        <li class="date"> @when, @time, @description</li>
                     }
                 }
             }
@@ -69,6 +70,7 @@
             foreach (var eventItem in Model.Items)
             {
                 string when = eventItem.Start.DateTime.ToString();
+                string description = eventItem.Description;
 
                 if (String.IsNullOrEmpty(when))
                 {
@@ -88,7 +90,7 @@
 
                     if (@eventItem.Summary == "Advanced Obedience")
                     {
-                        <li class="date"> @when, @time</li>
+                        <li class="date"> @when, @time, @description</li>
                     }
                 }
             }
@@ -123,6 +125,7 @@
             foreach (var eventItem in Model.Items)
             {
                 string when = eventItem.Start.DateTime.ToString();
+                string description = eventItem.Description;
 
                 if (String.IsNullOrEmpty(when))
                 {
@@ -142,7 +145,7 @@
 
                     if (@eventItem.Summary == "Puppy Beginners Class")
                     {
-                        <li class="date"> @when, @time</li>
+                        <li class="date"> @when, @time, @description</li>
                     }
                 }
             }
