@@ -9,13 +9,7 @@
 
 <header>
     <img src="~/images/dog21copy.jpg" style="width: 100%; border-radius: 10px; border: 3px solid #ffa500; margin-top: 25px;"/>
-    @*<div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="tagline"></h1>
-            </div>
-        </div>
-    </div>*@
+   
 </header>
 <!-- Page Content -->
 <div class="container">
@@ -53,19 +47,25 @@
     <hr>
     <div class="row">
         <div class="col-sm-4">
-            <img class="img-circle img-responsive img-center" src="~/images/dog2.jpeg" alt="">
+            <a href='@Url.Action("Services", "Scheduling")'>
+                <img class="img-circle img-responsive img-center" src="~/images/dog2.jpeg" alt="A dog">
+            </a>
             <h2>Training Classes</h2>
             <p>We offer training classes for a variety of behaviors Including basic obedience, advanced obedience and many more. View our course description to pick what is right for you and your companion. </p>
         </div>
         <div class="col-sm-4">
-            <img class="img-circle img-responsive img-center" src="~/images/dog7.jpeg" alt="">
+            <a href='@Url.Action("Schedule", "Scheduling")'>
+                <img class="img-circle img-responsive img-center" src="~/images/dog7.jpeg" alt="A dog">
+            </a>
             <h2>Class Schedule</h2>
             <p>Our class schedule shows the starting class for each series of classes. If you viewed the classes we offer and know what class is right for you, view our class schedule and send us an email to RSVP. </p>
         </div>
         <div class="col-sm-4">
-            <img class="img-circle img-responsive img-center" src="~/images/dog6.jpeg" alt="">
-            <h2>Trainers</h2>
-            <p>At Elite K_9 we have experienced trainers who have built strong relationships between dogs and owners. Each trainer is knowledgable and dedicated to creating a better life for you and your dogs.</p>
+            <a href='@Url.Action("Trainers", "Home")'>
+                <img class="img-circle img-responsive img-center" src="~/images/dog6.jpeg" alt="A dog">
+            </a>
+                <h2>Trainers</h2>
+                <p>At Elite K_9 we have experienced trainers who have built strong relationships between dogs and owners. Each trainer is knowledgable and dedicated to creating a better life for you and your dogs.</p>
         </div>
     </div>
     <!-- /.row -->
