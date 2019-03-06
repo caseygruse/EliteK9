@@ -28,6 +28,7 @@
             <br />
             <div class="form-horizontal emailForm">
                 <h4>Send us an email to RSVP</h4>
+                <h4 class="emailSent">@ViewBag.sent</h4>
                 <hr id="formLine" />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
@@ -64,10 +65,10 @@
 
                 <div class="form-group" id="submitForm">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Send Email" class="btn btn-default"/>
+                        <input type="submit" value="Send Email" class="btn btn-default" />
                     </div>
                 </div>
-                <h4 class="col-md-offset-2">@ViewBag.sent</h4>
+                
             </div>
         }
     </div>

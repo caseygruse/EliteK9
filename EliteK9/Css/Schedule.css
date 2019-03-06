@@ -63,3 +63,8 @@ hr{
 #submitForm{
     margin-bottom: 90px;
 }
+
+.emailSent {
+    font-weight: bold;
+    color: #ffa500;
+}

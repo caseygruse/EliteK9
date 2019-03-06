@@ -5,14 +5,65 @@ h2 {
     color: #ffa500;
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
     margin-top: 30px;
     
 }
 
 .info{
-    margin-top: 55px;
+    
     font-size: x-large;
-    margin-left: 35px;
+    /*margin-left: 35px;*/
+    margin-bottom: 100px;
 }
+
+
+/*     Form Style     */
+
+
+
+.emailForm {
+    margin: 0px;
+    margin-bottom: 40px;
+}
+
+.emailBg {
+}
+
+.emailImage {
+    margin-right: 20px;
+    margin-bottom: 50px;
+    border: 3px solid #ffa500;
+}
+
+
+
+.form-horizontal .control-label {
+    text-align: left;
+    margin: 0px;
+}
+
+.messageBox {
+    min-height: 120px;
+}
+
+
+hr {
+    visibility: hidden;
+}
+
+#formLine {
+    visibility: visible;
+}
+
+#submitForm {
+    margin-bottom: 90px;
+}
+.emailSent {
+    font-weight: bold;
+    color: #ffa500;
+    font-size: x-large
+}
+
+
