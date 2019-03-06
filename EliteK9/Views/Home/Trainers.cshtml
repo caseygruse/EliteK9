@@ -3,7 +3,7 @@
     ViewBag.Title = "Trainers";
 }
 
-<h2>Trainers</h2>
+<h2 id="title">Trainers</h2>
 
 @section head{
     <link href="~/Css/TrainersCss.css" rel="stylesheet" id="bootstrap-css">
@@ -15,9 +15,9 @@
 
     <div class="row">
 
-        <div class="col-xs-18 col-sm-6 col-md-3">
+        <div class="col-xs-18 col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="~/images/hannaMyers.jpg" alt="Hanna Myers">
+                <img class="trainer" src="~/images/hannaMyers.jpg" alt="Hanna Myers">
                 <div class="caption">
                     <h4>Hanna Myers</h4>
                     <p>
@@ -31,9 +31,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
+        <div class="col-xs-18 col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="~/images/sarahPerry.jpg" alt="Sarah Perry">
+                <img class="trainer" src="~/images/sarahPerry.jpg" alt="Sarah Perry">
                 <div class="caption">
                     <h4>Sarah Perry</h4>
                     <p>
@@ -46,16 +46,21 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
+        <div class="col-xs-18 col-sm-6 col-md-4">
             <div class="thumbnail">
-                <img src="~/images/paulGrosart.jpg" alt="Paul Grosart">
+                <img class="trainer" src="~/images/paulGrosart.jpg" alt="Paul Grosart">
                 <div class="caption">
-                    <h4>Thumbnail label</h4>
-                    <p>15.) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+                    <h4>Paul Grosart</h4>
+                    <p>
+                        Paul Grosart has been with Elite K9 for two years. He started out working with us as a client in our service dog program. He excelled in training with his terrier mix Geordi.
+                        Paul had been working with rescue dogs before coming to Elite K9. He has two wonderful terrier rescues and just added a third puppy to the mix.
+                        Paul trains only in positive reinforcemt methods and strives to learn  new and improved  ways to engage with his dogs and clients. Building relationships through clear communication is key.
+                        He is always looking for the best way to make training positive, productive and fun.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="col-xs-18 col-sm-6 col-md-3">
+        @*<div class="col-xs-18 col-sm-6 col-md-3">
             <div class="thumbnail">
                 <img src="http://placehold.it/500x300" alt="">
                 <div class="caption">
@@ -63,7 +68,7 @@
                     <p>16.) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
                 </div>
             </div>
-        </div>
+        </div>*@
     </div><!-- End row -->
 </div><!-- End container -->
 
