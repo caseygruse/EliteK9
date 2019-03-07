@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +21,12 @@
         <div class="container">
             <div class="navbar-header">
 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" alt="submit send email form" aria-label="submit email">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="~/images/pawPrint.png" style="margin-top: 5px;"/>
+                <img src="~/images/pawPrint.png" style="margin-top: 5px;" alt="paw print"/>
                 @Html.ActionLink("Elite K_9", "Index", "Home", new { area = "" }, new { @class = "navbar-brand title" })
             </div>
             <div class="navbar-collapse collapse">
@@ -44,7 +44,7 @@
 
                 </ul>
                 @Html.Partial("_LoginPartial")
-                <img src="~/images/pawPrint.png" style="margin-top: 5px;"/>
+                <img src="~/images/pawPrint.png" style="margin-top: 5px;" alt="paw print"/>
             </div>
         </div>
     </div>
