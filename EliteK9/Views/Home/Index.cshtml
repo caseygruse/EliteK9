@@ -5,11 +5,14 @@
 
 @section head{
     <link href="~/Css/HomePageCss.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="description" content="Elite K9 Tacoma WA. We have experienced dog trainers and expert services.
+          We develop your dogs ability through positive reinforcement and strengthening owner to dog relationships. Schedule a
+           training class with us or contact us for more information">
 }
 
 <header>
-    <img src="~/images/dog21copy.jpg" style="width: 100%; border-radius: 10px; border: 3px solid #ffa500; margin-top: 25px;"/>
-   
+    <img src="~/images/dog21copy.jpg" style="width: 100%; border-radius: 10px; border: 3px solid #ffa500; margin-top: 25px;" alt="four dogs sitting on a ledge" />
+
 </header>
 <!-- Page Content -->
 <div class="container">
@@ -19,9 +22,9 @@
             <h2>What We Do</h2>
             <p>Elite K9 has been offering a high level of specialized training for the past eighteen years. We specialize in canine communication, teaching everything from the basics to Advanced Sports work, such as agility, scent work, Rally, competition obedience, and AKC testing and Trick Dog testing. We offer a variety of group classes as well as private one-on-one sessions, that can be done at our facility or in the comfort of your own home. </p>
             <p>Our training methods are a combination of positive reinforcement with marking Behavior techniques, as well as cue and correction training. We do not employ prong collars, choke chains, or E collars in our regular classes. We do however teach proper use and handling of all different training aids to better help our clients to understand what will work best for them and their dog.</p>
-            
+
             <p>
-                @Html.ActionLink("Classes Offered", "Services", "Scheduling", null, new { @class = "btn btn-default btn-lg" }) 
+                @Html.ActionLink("Classes Offered", "Services", "Scheduling", null, new { @class = "btn btn-default btn-lg" })
             </p>
         </div>
         <div class="col-sm-4">
@@ -48,7 +51,7 @@
     <div class="row">
         <div class="col-sm-4">
             <a href='@Url.Action("Services", "Scheduling")'>
-                <img class="img-circle img-responsive img-center" src="~/images/dog2.jpeg" alt="A dog">
+                <img class="img-circle img-responsive img-center" src="~/images/dog2.jpeg" alt="A service dog">
             </a>
             <h2>Training Classes</h2>
             <p>We offer training classes for a variety of behaviors Including basic obedience, advanced obedience and many more. View our course description to pick what is right for you and your companion. </p>
@@ -62,25 +65,24 @@
         </div>
         <div class="col-sm-4">
             <a href='@Url.Action("Trainers", "Home")'>
-                <img class="img-circle img-responsive img-center" src="~/images/dog6.jpeg" alt="A dog">
+                <img class="img-circle img-responsive img-center" src="~/images/dog6.jpeg" alt="A dog training sign">
             </a>
-                <h2>Trainers</h2>
-                <p>At Elite K_9 we have experienced trainers who have built strong relationships between dogs and owners. Each trainer is knowledgable and dedicated to creating a better life for you and your dogs.</p>
+            <h2>Trainers</h2>
+            <p>At Elite K_9 we have experienced trainers who have built strong relationships between dogs and owners. Each trainer is knowledgable and dedicated to creating a better life for you and your dogs.</p>
         </div>
     </div>
     <!-- /.row -->
     <hr>
     <!-- Footer -->
-    
+
 </div>
 <!-- /.container -->
 <!-- jQuery -->
-
 @*May not be needed because the scripts from the layout page.*@
 @*
-@section scripts{
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-}
+    @section scripts{
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    }
 *@
