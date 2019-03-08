@@ -16,7 +16,7 @@ namespace EliteK9.Models
 {
     public static class Calendar
     {
-
+        //causing the access error for google calendar on hosted website not the production site.
         public static Events GetCalendarEvents()
         {
             string[] Scopes = { CalendarService.Scope.CalendarReadonly };
@@ -52,7 +52,7 @@ namespace EliteK9.Models
             request.TimeMin = DateTime.Now;
             request.ShowDeleted = false;
             request.SingleEvents = true;
-            request.MaxResults = 300;
+            request.MaxResults = 500;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
             // List events.

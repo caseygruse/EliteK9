@@ -7,7 +7,8 @@ namespace EliteK9
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //uncomment this when google calendar error is fixed.
+            //filters.Add(new HandleErrorAttribute());
         }
     }
 }
