@@ -4,8 +4,9 @@
     ViewBag.Title = "FAQ";
 }
 
-@section head{   
+@section head{
     <link href="~/Css/FAQCss.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="description" content="Elite K9 Tacoma WA. Dog training questions and answers.">
 }
 @*Im choosing to add the section head content to the layouts head.*@
 
@@ -17,12 +18,12 @@
 
     <div class="faq_container">
         <div class="faq">
-            
+
             <div class="faq_question">  @Html.DisplayFor(modelItem => item.Question)</div>
             <div class="faq_answer_container">
                 <div class="faq_answer">&nbsp; &nbsp; &nbsp; &nbsp; @Html.DisplayFor(modelItem => item.Answer)</div>
             </div>
-            
+
         </div>
     </div>
 }
