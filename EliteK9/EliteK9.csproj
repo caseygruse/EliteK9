@@ -311,13 +311,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="credentials.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="fonts\Philosopher-Bold.ttf" />
     <Content Include="fonts\Philosopher-BoldItalic.ttf" />
     <Content Include="fonts\Philosopher-Italic.ttf" />
     <Content Include="fonts\Philosopher-Regular.ttf" />
+    <Content Include="App_Data\credentials.json" />
     <None Include="Properties\PublishProfiles\elitek9tacoma - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\elitek9tacoma - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Test2EliteK9 - Web Deploy.pubxml" />
@@ -382,9 +380,7 @@
     <Content Include="Views\Home\UserNotifications.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

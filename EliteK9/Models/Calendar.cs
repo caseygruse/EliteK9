@@ -22,9 +22,10 @@ namespace EliteK9.Models
             string[] Scopes = { CalendarService.Scope.CalendarReadonly };
             string ApplicationName = "EliteK9";
 
-
+            //https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-azure?view=vs-2017
             UserCredential credential;
-            string path = HttpContext.Current.Server.MapPath("~/credentials.json");
+            string path = HttpContext.Current.Server.MapPath("~/App_Data/credentials.json");
+            
             using (var stream =
                 new FileStream(path, FileMode.Open, FileAccess.Read))
             {
