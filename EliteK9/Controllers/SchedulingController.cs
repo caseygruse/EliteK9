@@ -26,7 +26,7 @@ namespace EliteK9.Controllers
             return View();
         }
 
-        public PartialViewResult CalendarEvents()
+        public ActionResult CalendarEvents()
         {
             Google.Apis.Calendar.v3.Data.Events events = Calendar.GetCalendarEvents();
            

@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Web;
+using Google.Apis.Auth.OAuth2.Flows;
 
 
 
@@ -22,12 +23,15 @@ namespace EliteK9.Models
             string[] Scopes = { CalendarService.Scope.CalendarReadonly };
             string ApplicationName = "EliteK9";
 
+
             //https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-azure?view=vs-2017
             UserCredential credential;
-            string path = HttpContext.Current.Server.MapPath("~/App_Data/credentials.json");
-            
+            string path = HttpContext.Current.Server.MapPath("~/App_Data/client_id.json");
+
+          
+
             using (var stream =
-                new FileStream(path, FileMode.Open, FileAccess.Read))
+                new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
             {
                 // The file token.json stores the user's access and refresh tokens, and is created
                 // automatically when the authorization flow completes for the first time.
