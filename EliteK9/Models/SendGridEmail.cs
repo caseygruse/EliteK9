@@ -32,7 +32,7 @@ namespace EliteK9.Models
 
             var apiKey = System.Configuration.ConfigurationManager.AppSettings.Get("sendGridKey");
             var client = new SendGridClient(apiKey);
-            Console.WriteLine(apiKey);
+            
 
             await client.SendEmailAsync(msg);
         }
