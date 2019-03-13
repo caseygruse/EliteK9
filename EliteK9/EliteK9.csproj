@@ -316,7 +316,9 @@
     <Content Include="fonts\Philosopher-BoldItalic.ttf" />
     <Content Include="fonts\Philosopher-Italic.ttf" />
     <Content Include="fonts\Philosopher-Regular.ttf" />
-    <Content Include="App_Data\credentials.json" />
+    <Content Include="App_Data\credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\client_id.json" />
     <None Include="Properties\PublishProfiles\elitek9tacoma - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\elitek9tacoma - Web Deploy.pubxml" />
@@ -382,6 +384,7 @@
     <Content Include="Views\FAQ\Delete.cshtml" />
     <Content Include="Views\Home\UserNotifications.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="token.json\Google.Apis.Auth.OAuth2.Responses.TokenResponse-user" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

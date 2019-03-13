@@ -26,7 +26,7 @@ namespace EliteK9.Models
 
             //https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-azure?view=vs-2017
             UserCredential credential;
-            string path = HttpContext.Current.Server.MapPath("~/App_Data/client_id.json");
+            string path = HttpContext.Current.Server.MapPath("~/App_Data/credentials.json");
 
           
 

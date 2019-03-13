@@ -1,1 +1,12 @@
-{"web":{"client_id":"582207270241-oskksrks2ap0ovllte9afisn4q95j3r1.apps.googleusercontent.com","project_id":"elitek9-1551738917128","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"UsSl4X59rismmclBYF4vWYoK","redirect_uris":["http://elitek9tacoma.azurewebsites.net"],"javascript_origins":["http://elitek9tacoma.azurewebsites.net"]}}
+{
+  "web": {
+    "client_id": "582207270241-oskksrks2ap0ovllte9afisn4q95j3r1.apps.googleusercontent.com",
+    "project_id": "elitek9-1551738917128",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "UsSl4X59rismmclBYF4vWYoK",
+    "redirect_uris": [ "http://elitek9tacoma.azurewebsites.net" ],
+    "javascript_origins": [ "http://elitek9tacoma.azurewebsites.net" ]
+  }
+}

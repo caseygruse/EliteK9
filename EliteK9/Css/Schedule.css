@@ -24,8 +24,8 @@ iframe{
 }
 
 .emailForm{
-    margin: 0px;
-    margin-bottom: 40px;
+    /*margin: 0px;*/
+    margin-bottom: 200px;
 }
 
 .emailBg {
@@ -61,10 +61,11 @@ hr{
 }
 
 #submitForm{
-    margin-bottom: 90px;
+    margin-bottom: 100px;
 }
 
 .emailSent {
     font-weight: bold;
     color: #ffa500;
 }
+
