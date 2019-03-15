@@ -13,51 +13,26 @@
         {
             foreach (var eventItem in Model.Items)
             {
-                string when = eventItem.Start.DateTime.ToString();
-                string description = eventItem.Description;
-
-                if (String.IsNullOrEmpty(when))
+                if (eventItem.Summary == "Basic Obedience")
                 {
+                    string when = eventItem.Start.DateTime.ToString();
+                    string description = eventItem.Description;
+
                     when = eventItem.Start.Date;
                     DateTime temp = Convert.ToDateTime(when);
                     when = temp.ToString("MMMM dd");
 
-                    if (@eventItem.Summary == "Basic Obedience")
-                    {
-                        <li class="date">@when </li>
-                    }
-                }
-                else if (!String.IsNullOrEmpty(when))
-                {
                     when = eventItem.Start.DateTime.Value.ToString("MMMM dd");
                     string time = eventItem.Start.DateTime.Value.ToString("h:mm tt");
 
-                    if (@eventItem.Summary == "Basic Obedience")
-                    {
-                        <li class="date"> @when, @time, @description</li>
-                    }
+                    <li class="date"> @when, @time, @description</li>
                 }
             }
         }
-        else
-        {
-            <li class="date">No upcoming events found but please contact us.</li>
+        else {
+             <li class="date">No upcoming events found but please contact us.</li> 
         }
-        @if (Model.Items != null && Model.Items.Count > 0)
-        {
-            int basic = 0;
-            foreach (var eventItem in Model.Items)
-            {
-                if (eventItem.Summary == "Basic Obedience")
-                {
-                    basic = 1;
-                }
-            }
-            if (basic == 0)
-            {
-                <li class="date">No classes scheduled but pleases contact us. </li>
-            }
-        }
+
     </ul>
 </div>
 
