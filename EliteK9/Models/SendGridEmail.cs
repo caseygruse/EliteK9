@@ -21,7 +21,7 @@ namespace EliteK9.Models
 
             msg.SetFrom(new EmailAddress($"{e.SendersEmail}", $"{e.FirstName}, {e.LastName}"));
 
-            var recipients = new EmailAddress("caseygruse1@gmail.com", "Hanna Myers");
+            var recipients = new EmailAddress("hannamyers@hotmail.com", "Hanna Myers");
             //hannamyers @hotmail.com
 
             msg.AddTo(recipients);

@@ -25,7 +25,8 @@ iframe{
 
 .emailForm{
     /*margin: 0px;*/
-    margin-bottom: 200px;
+    display: inline-block;
+    margin-bottom: 50px;
 }
 
 .emailBg {
